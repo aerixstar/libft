@@ -6,7 +6,7 @@
 /*   By: aheng <aheng@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 16:20:31 by aheng             #+#    #+#             */
-/*   Updated: 2023/06/27 18:59:01 by aheng            ###   ########.fr       */
+/*   Updated: 2023/06/29 23:17:02 by aheng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,16 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	
+	int i;
+
+	i = 0;
+	while (s[i])
+	{
+		if(s[i] == (char)c)
+			return ((char *)s + i);
+		i++;
+	}
+	if (c == '\0')
+		return ((char *)s + i);
+	return (NULL);
 }

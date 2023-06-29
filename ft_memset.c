@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aheng <aheng@student.42kl.edu.my>          +#+  +:+       +#+        */
+/*   By: aheng <aheng@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 16:20:11 by aheng             #+#    #+#             */
-/*   Updated: 2023/06/27 20:20:31 by aheng            ###   ########.fr       */
+/*   Updated: 2023/06/27 20:33:57 by aheng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	str = b;
 	e = c;
 	if (!b || !c)
-		return (b)
+		return (b);
 	while (*str && len--)
 	{
 		*str = e;
