@@ -6,48 +6,66 @@
 /*   By: aheng <aheng@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 16:19:23 by aheng             #+#    #+#             */
-/*   Updated: 2023/06/30 20:28:05 by aheng            ###   ########.fr       */
+/*   Updated: 2023/07/02 18:59:59 by aheng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	string_rev(char *num, int i)
 {
-	int	i;
+	char	temp;
+	int		j;
+	int		len;
 
-	i = 0;
-	while (s[i] != '\0')
-		++i;
-	return (i);
+	j = 0;
+	len = (i / 2);
+	i--;
+	while (j < len)
+	{
+		temp = num[j];
+		num[j] = num[i];
+		num[i] = temp;
+		j++;
+		i--;
+	}
 }
 
-char *ft_itoa(int n)
+void	add_into_num(char *num, int *i, long n)
 {
-	int		i;
-	int		j;
-	char	temp[13];
-	char	*res;
-	
-	i = 0;
-	j = 0;
+	int	temp;
+
+	temp = n;
+	if (n < 0)
+		n *= -1;
+	if (n == 0)
+		num[(*i)++] = '0';
 	while (n)
 	{
-		temp[i] = n % 10 + '0';
-		n = n / 10;
-		i++;
+		num[(*i)++] = n % 10 + '0';
+		n /= 10;
 	}
-	temp[i] = '\0';
-	res = malloc(sizeof(char)* (ft_strlen(temp) + 1));
-	while (i--)
-	{
-		res[j++] = temp[i];
-	}
-	res[j] = '\0';
-	printf("%s\n", res);
+	if (temp < 0)
+		num[(*i)++] = '-';
+	num[*i] = '\0';
 }
 
-int	main(void)
+char	*ft_itoa(int n)
 {
-	ft_itoa(23);
+	int		i;
+	char	*num;
+
+	i = 0;
+	num = malloc(sizeof(char) * (12 + 1));
+	if (!num)
+		return (NULL);
+	add_into_num(num, &i, n);
+	string_rev(num, i);
+	return (num);
 }
+
+// #include <stdio.h>
+// int main()
+// {
+// 	printf("%s", ft_itoa(-2147483648));
+// }
