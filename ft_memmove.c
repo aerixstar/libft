@@ -6,7 +6,7 @@
 /*   By: aheng <aheng@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 16:19:50 by aheng             #+#    #+#             */
-/*   Updated: 2023/06/30 19:08:00 by aheng            ###   ########.fr       */
+/*   Updated: 2023/07/05 17:25:36 by aheng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char	*char_dst;
-	char	*char_src;
-	int		i;
+	char		*char_dst;
+	char		*char_src;
+	size_t		i;
 
 	if(!dst && !src)
 		return (NULL);

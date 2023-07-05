@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aheng <aheng@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/27 16:19:26 by aheng             #+#    #+#             */
-/*   Updated: 2023/06/27 19:13:30 by aheng            ###   ########.fr       */
+/*   Created: 2023/07/05 21:09:18 by aheng             #+#    #+#             */
+/*   Updated: 2023/07/05 21:39:29 by aheng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,17 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	
+	size_t			i;
+	unsigned char	*match;
+
+	match = (unsigned char *)s;
+	i = 0;
+	while (i < n)
+	{
+		if (*(match + i) == (unsigned char)c)
+			return(match + i);
+			++i;
+	}
+	match = '\0';
+	return (match);
 }

@@ -6,7 +6,7 @@
 /*   By: aheng <aheng@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 16:20:50 by aheng             #+#    #+#             */
-/*   Updated: 2023/06/29 23:31:29 by aheng            ###   ########.fr       */
+/*   Updated: 2023/07/05 17:26:32 by aheng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int i;
-	char *str1;
-	char *str2;
+	size_t	i;
+	char	*str1;
+	char	*str2;
 
 	str1 = (char *)s1;
 	str2 = (char *)s2;

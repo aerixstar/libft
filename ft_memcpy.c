@@ -6,7 +6,7 @@
 /*   By: aheng <aheng@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 16:19:45 by aheng             #+#    #+#             */
-/*   Updated: 2023/06/30 19:05:13 by aheng            ###   ########.fr       */
+/*   Updated: 2023/07/05 17:45:45 by aheng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,20 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	char	*char_dst;
-	char	*char_src;
-	int		i;
+	char		*char_dst;
+	char		*char_src;
+	size_t		i;
 
-	if (!dst && !src)
-		return (NULL);
 	char_dst = (char *)dst;
 	char_src = (char *)src;
+	if (!dst && !src)
+		return (NULL);
 	i = 0;
-	while (i < n && char_src[i])
+	while (i < n)
 	{
 		char_dst[i] = char_src[i];
 		i++;
 	}
-	char_dst[i] = '\0';
 	return (dst);
 }
 

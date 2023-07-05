@@ -6,7 +6,7 @@
 /*   By: aheng <aheng@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 16:20:23 by aheng             #+#    #+#             */
-/*   Updated: 2023/06/30 19:38:28 by aheng            ###   ########.fr       */
+/*   Updated: 2023/07/05 19:05:34 by aheng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	ft_putnbr_fd(int n, int fd)
 	prt_char(n, temp, fd);
 }
 
-int main()
-{
-	ft_putnbr_fd(-250, 1);
-}
+// int main()
+// {
+// 	ft_putnbr_fd(-250, 1);
+// }
