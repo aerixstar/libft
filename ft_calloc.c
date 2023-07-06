@@ -6,7 +6,7 @@
 /*   By: aheng <aheng@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 20:42:08 by aheng             #+#    #+#             */
-/*   Updated: 2023/07/05 17:21:23 by aheng            ###   ########.fr       */
+/*   Updated: 2023/07/06 14:24:06 by aheng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	int		*ptr;
+	char	*ptr;
 	size_t	i;
 
 	if (count == SIZE_MAX || size == SIZE_MAX)
 		return (NULL);
-	if (!count || !size)
-		return (NULL);
+	// if (!count || !size)
+	// 	return (NULL);
 	i = 0;
 	ptr = malloc(count * size);
 	if (!ptr)
 		return (NULL);
 	while (i < (count * size))
-		ptr[i] = 0;
+		ptr[i++] = '\0';
 	return ((void *)ptr);
 }
