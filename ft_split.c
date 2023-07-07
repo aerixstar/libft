@@ -6,7 +6,7 @@
 /*   By: aheng <aheng@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 16:20:29 by aheng             #+#    #+#             */
-/*   Updated: 2023/06/30 17:43:57 by aheng            ###   ########.fr       */
+/*   Updated: 2023/07/07 18:43:21 by aheng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,8 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
+	if (s == NULL)
+		return (NULL);
 	strs = malloc(sizeof(char *) * (count_wrd((char *)s, c) + 1));
 	if (!strs)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: aheng <aheng@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 16:20:23 by aheng             #+#    #+#             */
-/*   Updated: 2023/07/05 19:05:34 by aheng            ###   ########.fr       */
+/*   Updated: 2023/07/07 17:56:55 by aheng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	prt_char(int n, char *temp, int fd)
 		temp[i] = n % 10 + '0';
 		i++;
 		n = n / 10;
-	} 
+	}
 	while (i--)
 		write(fd, &temp[i], 1);
 }
@@ -31,7 +31,7 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	int		i;
 	char	temp[12];
-	
+
 	i = 0;
 	if (n == 0)
 	{

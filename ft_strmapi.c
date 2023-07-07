@@ -6,7 +6,7 @@
 /*   By: aheng <aheng@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 21:13:40 by aheng             #+#    #+#             */
-/*   Updated: 2023/07/05 17:26:03 by aheng            ###   ########.fr       */
+/*   Updated: 2023/07/07 15:04:04 by aheng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		res[i] = (*f)(i, s[i]);
 		++i;
 	}
-	res = NULL;
+	res[i] = '\0';
 	return (res);
 }

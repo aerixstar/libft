@@ -6,7 +6,7 @@
 /*   By: aheng <aheng@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 21:13:47 by aheng             #+#    #+#             */
-/*   Updated: 2023/06/25 21:51:23 by aheng            ###   ########.fr       */
+/*   Updated: 2023/07/07 18:04:23 by aheng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	lenstack;
 
-	lenstack = ft_strlen(s + start);
 	if (!s)
 		return (NULL);
+	lenstack = ft_strlen(s + start);
 	if (len > lenstack)
 		len = lenstack;
 	return (substr2(s, start, len));

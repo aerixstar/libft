@@ -6,7 +6,7 @@
 /*   By: aheng <aheng@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 21:13:24 by aheng             #+#    #+#             */
-/*   Updated: 2023/06/25 21:51:28 by aheng            ###   ########.fr       */
+/*   Updated: 2023/07/07 15:07:49 by aheng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ void	ft_putendl_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
+	if (!s)
+		return ;
 	while (s[i])
-		write(fd, &s[i], 1);
+		write(fd, &s[i++], 1);
 	write(fd, "\n", 1);
 }
